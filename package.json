@@ -1,0 +1,28 @@
+{
+  "name": "validator-xingsk",
+  "version": "1.0.1",
+  "description": "js验证包",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/x1141300029/validator-xingsk.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "校验",
+    "验证"
+  ],
+  "author": "邢世宽",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/x1141300029/validator-xingsk/issues"
+  },
+  "homepage": "https://github.com/x1141300029/validator-xingsk#readme"
+}
