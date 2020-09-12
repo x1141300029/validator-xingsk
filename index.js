@@ -1,27 +1,30 @@
 /**
- * isArray:是否为数组
- * isChinese:是否为中文
- * isDouble:是否为浮点数(小数)
- * isIDCard:是否为身份证号
- * isInteger:是否为整数
- * isLetter:是否为全英文
- * isNull:是否为空
- * isNumber:是否为数字
- * isObject:是否为json数据
- * isPhone:是否为手机号
- * isZip:是否为邮编
+ * @function isArray:是否为数组
+ * @function isChinese:是否为中文
+ * @function isDouble:是否为浮点数(小数)
+ * @function isIDCard:是否为身份证号
+ * @function isInteger:是否为整数
+ * @function isLetter:是否为全英文
+ * @function isNull:是否为空
+ * @function isNumber:是否为数字
+ * @function isObject:是否为json数据
+ * @function isPhone:是否为手机号
+ * @function isZip:是否为邮编
+ *
+ * @function validate:校验函数
  */
 module.exports={
-  isArray:require('./lib/isArray'),
-  isChinese:require('./lib/isChinese'),
-  isDouble:require('./lib/isDouble'),
-  isEmail:require('./lib/isEmail'),
-  isIDCard:require('./lib/isIDCard'),
-  isInteger:require('./lib/isInteger'),
-  isLetter:require('./lib/isLetter'),
-  isNull:require('./lib/isNull'),
+  isArray:require('./lib/isArray/isArray'),
+  isChinese:require('./lib/isChinese/isChinese'),
+  isDouble:require('./lib/isDouble/isDouble'),
+  isEmail:require('./lib/isEmail/isEmail'),
+  isIDCard:require('./lib/isIdCard/isIDCard'),
+  isInteger:require('./lib/isInteger/isInteger'),
+  isLetter:require('./lib/isLetter/isLetter'),
+  isNull:require('./lib/isNull/isNull'),
   isNumber:require('./lib/isNumber'),
   isObject:require('./lib/isObject'),
   isPhone:require('./lib/isPhone'),
   isZip:require('./lib/isZip'),
+  validate:require('./function'),
 };

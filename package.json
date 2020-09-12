@@ -1,7 +1,7 @@
 {
   "name": "validator-xingsk",
-  "version": "1.0.1",
-  "description": "js验证包",
+  "version": "1.0.2",
+  "description": "js校验",
   "main": "index.js",
   "directories": {
     "lib": "lib"

@@ -1,3 +1,6 @@
+/**
+ * 正则表达式
+ */
 /* 15位身份证号 */
 const IDNUMBER15 ='^[1-9]\\d{5}\\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\\d{3}$';
 /* 18位身份证号 */
@@ -13,14 +16,13 @@ const LETTER='^[a-zA-Z]+$';
 /* 验证数字 */
 const NUMBER='^[0-9]*$';
 /* 全整数 */
-const INTEGER='^[-+]?\d*$';
+const INTEGER='^[-\\+]?\\d*$';
 /* 小数 */
-const DOUBLE='^[-\+]?\d+(\.\d+)?$';
+const DOUBLE='^[-\\+]?\d+(\\.\\d+)?$';
 /* 中文 */
-const CHINESE='^[\u0391-\\uFFE5]+$';
+const CHINESE='^[\\u0391-\\\uFFE5]+$';
 /* 邮编 */
-const ZIP='^\d{6}$';
-
+const ZIP='^\\d{6}$';
 module.exports={
     IDNUMBER15,
     IDNUMBER18,
