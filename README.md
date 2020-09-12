@@ -65,7 +65,7 @@ console.log(isChinese(['你好'])) //true
 
 > 是否为浮点数(小数)，支持正小数或负小数
 
-```
+```javascript
 import {isDouble} from 'validator-xingsk'
 
 console.log(isDouble(123)) //false
@@ -76,7 +76,7 @@ console.log(isDouble(123.123)) //true
 
 > 是否为身份证号
 
-```
+```javascript
 import {isIDCard} from 'validator-xingsk'
 
 console.log(isIDCard(123)) //false
@@ -87,7 +87,7 @@ console.log(isIDCard(123)) //false
 
 > 是否为整数，支持正整数或负整数
 
-```
+```javascript
 import {isInteger} from 'validator-xingsk'
 
 console.log(isInteger(123)) //true
@@ -98,7 +98,7 @@ console.log(isInteger(123.123)) //false
 
 > 是否为空。注意：数字0不为空
 
-```
+```javascript
 import {isNull} from 'validator-xingsk'
 
 console.log(isNull('')) //true
@@ -110,7 +110,7 @@ console.log(isNull(0)) //false
 
 > 是否为数字
 
-```
+```javascript
 import {isNumber} from 'validator-xingsk'
 
 console.log(isNumber('')) //false
@@ -122,7 +122,7 @@ console.log(isNumber(123.123)) //true
 
 > 是否为JSON
 
-```
+```javascript
 import {isObject} from 'validator-xingsk'
 
 console.log(isObject('')) //false
@@ -133,7 +133,7 @@ console.log(isObject({code:1})) //true
 
 > 是否为手机号
 
-```
+```javascript
 import {isPhone} from 'validator-xingsk'
 
 console.log(isPhone('123123')) //false
@@ -144,7 +144,7 @@ console.log(isPhone('13161497787')) //true
 
 > 是否为邮编
 
-```
+```javascript
 import {isPhone} from 'validator-xingsk'
 
 console.log(isPhone('100010')) //true
