@@ -13,18 +13,8 @@
  *
  * @function validate:校验函数
  */
+const validate = require('./function');
 module.exports={
-  isArray:require('./lib/isArray/isArray'),
-  isChinese:require('./lib/isChinese/isChinese'),
-  isDouble:require('./lib/isDouble/isDouble'),
-  isEmail:require('./lib/isEmail/isEmail'),
-  isIDCard:require('./lib/isIdCard/isIDCard'),
-  isInteger:require('./lib/isInteger/isInteger'),
-  isLetter:require('./lib/isLetter/isLetter'),
-  isNull:require('./lib/isNull/isNull'),
-  isNumber:require('./lib/isNumber'),
-  isObject:require('./lib/isObject'),
-  isPhone:require('./lib/isPhone'),
-  isZip:require('./lib/isZip'),
-  validate:require('./function'),
+  ...require('./lib'),
+  validate,
 };
