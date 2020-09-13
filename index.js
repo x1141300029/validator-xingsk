@@ -14,7 +14,30 @@
  * @function validate:校验函数
  */
 const validate = require('./function');
-module.exports={
-  ...require('./lib'),
-  validate,
+const {
+    isArray,
+    isChinese,
+    isDouble,
+    isIDCard,
+    isInteger,
+    isLetter,
+    isNull,
+    isNumber,
+    isObject,
+    isPhone,
+    isZip,
+} = require('./lib');
+module.exports = {
+    isArray,
+    isChinese,
+    isDouble,
+    isIDCard,
+    isInteger,
+    isLetter,
+    isNull,
+    isNumber,
+    isObject,
+    isPhone,
+    isZip,
+    validate,
 };

@@ -1,4 +1,27 @@
+const {
+    IDNUMBER15,
+    IDNUMBER18,
+    PHONE,
+    TELPHONE,
+    EMAIL,
+    ZIP,
+    CHINESE,
+    DOUBLE,
+    INTEGER,
+    NUMBER,
+    LETTER,
+}=require('./pattern');
 module.exports={
     message:require('./message'),
-    ...require('./pattern')
+    IDNUMBER15,
+    IDNUMBER18,
+    PHONE,
+    TELPHONE,
+    EMAIL,
+    ZIP,
+    CHINESE,
+    DOUBLE,
+    INTEGER,
+    NUMBER,
+    LETTER,
 }
