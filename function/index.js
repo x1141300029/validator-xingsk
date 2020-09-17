@@ -3,6 +3,7 @@ const {
     isNull,
     isPhone,
     isObject,
+    isEmail
 } = require('../lib');
 const {message} = require('../config')
 
@@ -45,8 +46,8 @@ module.exports = (options = []) => {
                     return Object.assign(message['-10'], {message: item.message || (message['-10']).message})
                 }
             } else if (item.type === "email") {
-                //验证是否是手机号
-                if (!(isPhone(item.value))) {
+                //验证是否是邮箱
+                if (!(isEmail(item.value))) {
                     return Object.assign(message['-10'], {message: item.message || (message['-10']).message})
                 }
             }
