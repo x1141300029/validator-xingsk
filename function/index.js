@@ -86,16 +86,19 @@ module.exports = (options = []) => {
                 return Object.assign(message['-10'], {message: item.message || (message['-10']).message})
             }
         } else if (item.pattern) {
-            let pat = item.pattern.toString();
-            if (typeof item.pattern === "object") {
-                if (!(/\/([a][\S]{2}|[\S][b][\S]|[\S]{2}[^c])\/$/.test(pat))) {
-                    console.error('配置错误：您输入的正则表达式不正确，详细配置见github：https://github.com/x1141300029/validator-xingsk')
-                    return message['-13'];
-                }
-            }
-            pat = pat.substring(1, pat.length - 1);
-            if (!(new RegExp(pat).test(item.value))) {
-                return Object.assign(message['-14'], {message: item.message || (message['-10']).message});
+            // let pat = item.pattern.toString();
+            // if (typeof item.pattern === "object") {
+            //     if (!(/\/([a][\S]{2}|[\S][b][\S]|[\S]{2}[^c])\/$/.test(pat))) {
+            //         console.error('配置错误：您输入的正则表达式不正确，详细配置见github：https://github.com/x1141300029/validator-xingsk')
+            //         return message['-13'];
+            //     }
+            // }
+            // pat = pat.substring(1, pat.length - 1);
+            // if (!(new RegExp(pat).test(item.value))) {
+            //     return Object.assign(message['-14'], {message: item.message || (message['-10']).message});
+            // }
+            if(!(new RegExp(item.pattern).test(item.value))){
+                return  Object.assign(message['-14'],{message:item.message||(message['-10']).message});
             }
         }
     }
