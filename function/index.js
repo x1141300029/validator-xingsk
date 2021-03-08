@@ -70,7 +70,7 @@ module.exports = (options = []) => {
                     } else if (item.value.length < item.minlength) {
                         return Object.assign(message['-10'], {message: item.message || (message['-10']).message})
                     }
-                }else{
+                } else {
                     if (isNull(item.value)) {
                         return Object.assign(message['-11'], {message: item.message || (message['-11']).message});
                     } else if (item.value.length > item.maxlength) {
@@ -78,8 +78,8 @@ module.exports = (options = []) => {
                     }
                 }
             }
-        }else if(item.length){//判断值长度
-            item.length=parseInt(item.length+'');
+        } else if (item.length) {//判断值长度
+            item.length = parseInt(item.length + '');
             if (isNull(item.value)) {
                 return Object.assign(message['-11'], {message: item.message || (message['-11']).message});
             } else if (item.value.length !== item.length) {
@@ -97,8 +97,14 @@ module.exports = (options = []) => {
             // if (!(new RegExp(pat).test(item.value))) {
             //     return Object.assign(message['-14'], {message: item.message || (message['-10']).message});
             // }
-            if(!(new RegExp(item.pattern).test(item.value))){
-                return  Object.assign(message['-14'],{message:item.message||(message['-10']).message});
+            if (typeof item.pattern === "object") {
+                if (!item.pattern.test(item.value)) {
+                    return Object.assign(message['-14'], {message: item.message || message['-10'].message})
+                }
+            } else {
+                if (!(new RegExp(item.pattern).test(item.value))) {
+                    return Object.assign(message['-14'], {message: item.message || (message['-10']).message});
+                }
             }
         }
     }

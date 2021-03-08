@@ -160,7 +160,7 @@ let validateMessage=validate([
     {value:'1141300029@qq.com',required:true,type:'email'},
     {value:'1141300029@qq.com',required:true,type:'email',message:'邮箱格式错误'},
     {value:'123',min:1,max:6,message:'最少1位数最多6位数'},
-    {value:"123",pattern:'[0-9]',message:'请输入0-9的数字（暂时只支持字符串格式的正则）'}
+    {value:"123",pattern:'[0-9]',message:'请输入0-9的数字'}
 ])
 if(validateMessage<0){
     console.log('匹配失败');
